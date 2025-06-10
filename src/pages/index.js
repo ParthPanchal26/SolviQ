@@ -1,0 +1,6 @@
+export { default as Home } from './Home.jsx'
+export { default as Navbar } from './Navbar.jsx'
+export { default as About } from './About.jsx'
+export { default as Courses } from './Courses.jsx'
+export { default as MyLearning } from './MyLearning.jsx'
+export { default as SignIn } from './SignIn.jsx'
