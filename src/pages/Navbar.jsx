@@ -1,7 +1,18 @@
-import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
+import { logout } from '../redux/authSlice'
+import toast from 'react-hot-toast'
 
 const Navbar = () => {
+
+    const token = useSelector((state) => state.auth.token)
+    const dispatch = useDispatch()
+
+    const handleLogout = () => {
+        dispatch(logout())
+        toast.success('User sign-out successfully!')
+    }
+
     return (
         <>
             <nav className="bg-white w-full z-20 sticky top-0 start-0 shadow">
@@ -11,7 +22,10 @@ const Navbar = () => {
                     </Link>
 
                     <div className="hidden md:flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                        <Link to='/sign-in' className="text-blue-600 transition-all cursor-pointer hover:text-green-600 hover:underline hover:underline-offset-1 w-[100px] font-medium rounded-lg text-lg px-4 py-2 text-center">Sign In</Link>
+                        {token 
+                        ? <button onClick={handleLogout} className="text-blue-600 transition-all cursor-pointer hover:text-red-600 hover:underline hover:underline-offset-1 w-[100px] font-medium rounded-lg text-lg px-4 py-2 text-center">Logout</button> 
+                        : <Link to='/sign-in' className="text-blue-600 transition-all cursor-pointer hover:text-green-600 hover:underline hover:underline-offset-1 w-[100px] font-medium rounded-lg text-lg px-4 py-2 text-center">Sign In</Link>
+                        }
                     </div>
 
                     <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
