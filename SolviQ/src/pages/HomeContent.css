@@ -1,0 +1,199 @@
+
+.hero-section {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #78bbfa, #fafafa);
+}
+
+e
+.hero-bg-wrapper {
+  background: none; 
+  padding: 0;
+}
+
+
+
+.hero-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-left {
+  flex: 1 1 45%;
+  text-align: left;
+}
+
+.hero-left h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  line-height: 1.3;
+}
+
+.hero-left p {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #4b5563;
+}
+
+.hero-search {
+  margin-top: 25px;
+}
+
+.hero-search input {
+  width: 80%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 14px;
+}
+
+.hero-search-note {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.hero-right {
+  flex: 1 1 50%;
+  position: relative;
+  text-align: center;
+}
+
+.hero-bg-img {
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  width: 300px;
+  opacity: 0.6;
+}
+
+.hero-img {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  height: 750px;
+}
+
+.badge {
+  position: absolute;
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.badge-orange {
+  top: 20px;
+  right: 20px;
+  color: #ea580c;
+}
+
+.badge-blue {
+  bottom: 20px;
+  left: 20px;
+  color: #2563eb;
+}
+
+.badge-red {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #dc2626;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.box {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-6px);
+}
+
+.images {
+  height: 160px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.images img:hover {
+  transform: scale(1.1);
+}
+
+.text {
+  padding: 1rem;
+}
+
+.text h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user img {
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+}
+
+.user span {
+  font-size: 14px;
+  margin-left: 8px;
+  color: #374151;
+}
+
+.box-footer {
+  padding: 0.75rem;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-footer span {
+  font-size: 14px;
+  color: #10b981; /* green for "Free" */
+}
+
+.box-footer a {
+  font-size: 14px;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.box-footer a:hover {
+  text-decoration: underline;
+}
+
